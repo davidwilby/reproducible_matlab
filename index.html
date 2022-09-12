@@ -398,22 +398,25 @@
 </section>
 <section id="general-principles-of-reproducible-code" class="slide level2">
 <h2>General Principles of Reproducible Code</h2>
+<div class="fragment">
 <ul>
-<li>Organise your project</li>
-<li>Share the code</li>
-<li>Share the data</li>
-<li>Define dependencies</li>
-<li>Use version control</li>
-<li>Document how to use the code</li>
-<li>Get colleagues to try it out!</li>
+<li>Organise your project <span class="emoji" data-emoji="bookmark_tabs">📑</span></li>
 </ul>
-</section>
-<section id="organise-your-project" class="slide level2">
-<h2>Organise your project</h2>
-<p><br></p>
+</div>
+<div class="fragment">
+<!-- ## Organise your project -->
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="try-this">Try this! <span class="emoji" data-emoji="heavy_check_mark">✔️</span></h3>
+<p><strong>Instead of</strong> <span class="emoji" data-emoji="x">❌</span></p>
+<pre><code>first_try.m
+pretty.fig
+stuff/
+how%20torun.docx
+data.csv
+data_(01).csv
+data.txt</code></pre>
+</div><div class="column" style="width:50%;">
+<p><strong>Try</strong> <span class="emoji" data-emoji="heavy_check_mark">✔️</span></p>
 <pre><code>data/
 docs/
 figs/
@@ -424,23 +427,30 @@ src/
     03_fit_model.m
     04_plot_figs.m
 README.md</code></pre>
-</div><div class="column" style="width:50%;">
-<h3 id="not-this">Not this! <span class="emoji" data-emoji="x">❌</span></h3>
-<pre><code>first_try.m
-pretty.fig
-stuff/
-how%20torun.docx
-data.csv
-data_(01).csv
-data.txt</code></pre>
 </div>
 </div>
 <p><font size="3">Via <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></font></p>
+</div>
+</section>
+<section id="general-principles-of-reproducible-code-1" class="slide level2">
+<h2>General Principles of Reproducible Code</h2>
+<div>
+<ul>
+<li class="fragment">Share the code <span class="emoji" data-emoji="microscope">🔬</span></li>
+<li class="fragment">Share the data <span class="emoji" data-emoji="bar_chart">📊</span></li>
+<li class="fragment">Define dependencies <span class="emoji" data-emoji="nerd_face">🤓</span></li>
+<li class="fragment">Use version control <span class="emoji" data-emoji="octopus">🐙</span></li>
+<li class="fragment">Document how to use the code <span class="emoji" data-emoji="clipboard">📋</span></li>
+<li class="fragment">Get colleagues to try it out! <span class="emoji" data-emoji="people_holding_hands">🧑‍🤝‍🧑</span></li>
+</ul>
+</div>
 </section>
 <section id="matlab-can-be-challenging" class="slide level2">
 <h2>MATLAB can be … challenging</h2>
 <ul>
-<li>Packages/lack thereof, project management, dependency management, the path</li>
+<li>No package manager</li>
+<li>No virtual envrironments (sort of)</li>
+<li>Limited dependency discovery</li>
 <li>Proprietary source code</li>
 <li>MathWorks get most of their income from industry - so aren’t largely motivated to develop open source tools and guidance</li>
 <li>Lots of weird binary file formats</li>
@@ -449,19 +459,27 @@ data.txt</code></pre>
 </section>
 <section id="so-why-bother" class="slide level2">
 <h2>So why bother?</h2>
-<p>Lots of researchers use MATLAB.</p>
-
-<img data-src="assets/images/matlab_publications.png" class="r-stretch quarto-figure-center"><div data-align="center">
-<font size="3">Data from: <a href="https://webofscience.com">Web of Science</a></font>
+<div class="fragment">
+<h4 id="lots-of-researchers-use-matlab.">Lots of researchers use MATLAB.</h4>
+<p><img src="assets/images/matlab_publications.png" width="600" align="center"></p>
+<p><font size="3">Data from: <a href="https://webofscience.com">Web of Science</a></font></p>
 </div>
 </section>
 <section>
 <section id="the-solution" class="title-slide slide level1 center">
-<h1>The Solution</h1>
+<h1>The Solution?</h1>
 
 </section>
 <section id="matlab-projects" class="slide level2">
 <h2>MATLAB ‘Projects’</h2>
+<ul>
+<li>almost like a virtual environment</li>
+<li>loads files onto the MATLAB <code>path</code></li>
+</ul>
+
+<img src="assets/images/matlab_project.png" width="50%" class="r-stretch"></section>
+<section id="dependency-management" class="slide level2">
+<h2>Dependency management</h2>
 </section>
 <section id="version-controlopen-source-development" class="slide level2">
 <h2>Version Control/Open Source Development</h2>
@@ -471,19 +489,19 @@ data.txt</code></pre>
 </section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
-</section></section>
-<section id="guiding-principles-for-reproducibility-in-my-opinion.." class="title-slide slide level1 center">
-<h1>Guiding Principles for Reproducibility<br>(in my opinion..)</h1>
+</section>
+<section id="guiding-principles-for-reproducibility" class="slide level2">
+<h2>Guiding Principles for Reproducibility</h2>
+<h3 id="in-my-opinion..">(in my opinion..)</h3>
 <ul>
 <li>write documentation</li>
 <li>think about environment management</li>
 <li>write examples (documentation)</li>
-<li>tutorials (also documentation)</li>
 <li>project organisation</li>
+<li>tutorials (also documentation)</li>
 <li>explain how to use the code (documentation)</li>
 </ul>
-</section>
-
+</section></section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 <div class="columns">
@@ -491,11 +509,11 @@ data.txt</code></pre>
 <ul>
 <li><a href="https://the-turing-way.netlify.app">The Turing Way</a></li>
 <li><a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></li>
-<li><a href="https://davidwilby.dev/repliMAT">RepliMAT (Coming soon!)</a></li>
-<li><a href="https://rse.shef.ac.uk/support/code-clinic/">RSE Code Clinics</a></li>
+<li><a href="https://davidwilby.dev/repliMAT">repliMAT (Coming soon!)</a></li>
+<li><a href="https://rse.shef.ac.uk/support/code-clinic/">Code Clinics</a></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="assets/images/qrcode.png"></p>
+<p><a href="https://davidwilby.dev/reproducible_matlab"><img data-src="assets/images/qrcode.png"></a></p>
 </div>
 </div>
 <div class="footer footer-default">
@@ -656,7 +674,7 @@ data.txt</code></pre>
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
