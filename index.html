@@ -333,11 +333,28 @@
 <section id="who-am-i" class="slide level2">
 <h2>Who am I?</h2>
 <h3 id="and-why-should-i-be-talking-about-this">And why should I be talking about this?</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="assets/images/RSE_logo_blackborder.png" width="300" align="center"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="assets/images/SSIFullColour.png" width="300" align="center"></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
 <ul>
-<li>Researcher in biology/physics for ~ 9 years</li>
-<li>Research Software Engineer for 3 years</li>
+<li>Previously researcher in biology/physics</li>
+<li>Research Software Engineer</li>
 <li><a href="https://software.ac.uk/">Software Sustainability Institute</a> Fellow</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="what-is-reproducibility" class="slide level2">
 <h2>What is reproducibility?</h2>
@@ -346,31 +363,84 @@
 </section>
 <section id="why-is-reproducibility-important-for-research" class="slide level2">
 <h2>Why is reproducibility important for research?</h2>
-
-<img data-src="assets/images/turing-reasons-reproducibility.png" class="r-stretch quarto-figure-center"><p><font size="3">Image: <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html">The Turing Way</a></font></p>
-<div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/images/turing-reasons-reproducibility.png"></p>
+</figure>
+</div>
+<p><font size="3">Image: <a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html">The Turing Way</a></font></p>
+</div><div class="column" style="width:50%;">
 <ul>
-<li class="fragment"><h2 id="verification">Verification <span class="emoji" data-emoji="heavy_check_mark">✔️</span></h2></li>
-<li class="fragment"><h2 id="share-learning">Share learning</h2></li>
-<li class="fragment"><h2 id="re-use">Re-use <span class="emoji" data-emoji="recycle">♻️</span></h2></li>
-<li class="fragment"><h2 id="longevity">Longevity <span class="emoji" data-emoji="hourglass_flowing_sand">⏳</span></h2></li>
-<li class="fragment"><h2 id="efficiency">Efficiency <span class="emoji" data-emoji="watch">⌚</span></h2></li>
-<li class="fragment"><h2 id="stop-people-from-emailing-asking-for-your-code">Stop people from emailing asking for your code!</h2></li>
+<li><strong>Verification</strong> <span class="emoji" data-emoji="heavy_check_mark">✔️</span></li>
+<li><strong>Share learning</strong></li>
+<li><strong>Re-use</strong> <span class="emoji" data-emoji="recycle">♻️</span></li>
+<li><strong>Longevity</strong> <span class="emoji" data-emoji="hourglass_flowing_sand">⏳</span></li>
+<li><strong>Efficiency</strong> <span class="emoji" data-emoji="watch">⌚</span></li>
+<li><strong>Make code accessible</strong></li>
 </ul>
 </div>
+</div>
 </section>
-<section id="the-challenge-of-reproducibility" class="slide level2">
-<h2>The Challenge of Reproducibility</h2>
+<section id="what-is-software" class="slide level2">
+<h2>What is <em>software</em>?</h2>
+
+<img data-src="assets/images/software-code-twitter-poll.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-challenge-of-software-reproducibility" class="slide level2">
+<h2>The Challenge of Software Reproducibility</h2>
 <ul>
 <li>Create a well-defined computational <strong>“environment”</strong></li>
 <li>Document required software, data and where to get them</li>
 <li>Document steps to reproduce analysis</li>
 </ul>
 </section>
+<section id="general-principles-of-reproducible-code" class="slide level2">
+<h2>General Principles of Reproducible Code</h2>
+<ul>
+<li>Organise your project</li>
+<li>Share the code</li>
+<li>Share the data</li>
+<li>Define dependencies</li>
+<li>Use version control</li>
+<li>Document how to use the code</li>
+<li>Get colleagues to try it out!</li>
+</ul>
+</section>
+<section id="organise-your-project" class="slide level2">
+<h2>Organise your project</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="try-this">Try this! <span class="emoji" data-emoji="heavy_check_mark">✔️</span></h3>
+<pre><code>data/
+docs/
+figs/
+output/
+src/
+    01_download_data.m
+    02_clean_data.m
+    03_fit_model.m
+    04_plot_figs.m
+README.md</code></pre>
+</div><div class="column" style="width:50%;">
+<h3 id="not-this">Not this! <span class="emoji" data-emoji="x">❌</span></h3>
+<pre><code>first_try.m
+pretty.fig
+stuff/
+how%20torun.docx
+data.csv
+data_(01).csv
+data.txt</code></pre>
+</div>
+</div>
+<p><font size="3">Via <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></font></p>
+</section>
 <section id="matlab-can-be-challenging" class="slide level2">
 <h2>MATLAB can be … challenging</h2>
 <ul>
-<li>Packages/lack thereof, project manageent, dependency management, the path</li>
+<li>Packages/lack thereof, project management, dependency management, the path</li>
 <li>Proprietary source code</li>
 <li>MathWorks get most of their income from industry - so aren’t largely motivated to develop open source tools and guidance</li>
 <li>Lots of weird binary file formats</li>
@@ -379,7 +449,11 @@
 </section>
 <section id="so-why-bother" class="slide level2">
 <h2>So why bother?</h2>
-<p>Lots of researchers use MATLAB, they aren’t all going to stop</p>
+<p>Lots of researchers use MATLAB.</p>
+
+<img data-src="assets/images/matlab_publications.png" class="r-stretch quarto-figure-center"><div data-align="center">
+<font size="3">Data from: <a href="https://webofscience.com">Web of Science</a></font>
+</div>
 </section>
 <section>
 <section id="the-solution" class="title-slide slide level1 center">
@@ -399,7 +473,7 @@
 <h2>Documentation</h2>
 </section></section>
 <section id="guiding-principles-for-reproducibility-in-my-opinion.." class="title-slide slide level1 center">
-<h1>Guiding Principles for Reproducibility (in my opinion..)</h1>
+<h1>Guiding Principles for Reproducibility<br>(in my opinion..)</h1>
 <ul>
 <li>write documentation</li>
 <li>think about environment management</li>
@@ -412,12 +486,18 @@
 
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><a href="https://the-turing-way.netlify.app">The Turing Way</a></li>
 <li><a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></li>
 <li><a href="https://davidwilby.dev/repliMAT">RepliMAT (Coming soon!)</a></li>
 <li><a href="https://rse.shef.ac.uk/support/code-clinic/">RSE Code Clinics</a></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="assets/images/qrcode.png"></p>
+</div>
+</div>
 <div class="footer footer-default">
 <p><strong>slides</strong>: <a href="https://davidwilby.dev/reproducible_matlab">davidwilby.dev/reproducible_matlab</a> - <strong>improve this talk!</strong> <a href="https://github.com/davidwilby/reproducible_matlab">github.com/davidwilby/reproducible_matlab</a></p>
 </div>
@@ -448,13 +528,13 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': true,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: false,
