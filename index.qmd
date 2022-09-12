@@ -6,14 +6,28 @@ institute: "<strong>OpenFest</strong>"
 date: "Thurs 15th September 2022"
 footer: "**slides**: [davidwilby.dev/reproducible_matlab](https://davidwilby.dev/reproducible_matlab) - **improve this talk!** [github.com/davidwilby/reproducible_matlab](https://github.com/davidwilby/reproducible_matlab)"
 from: markdown+emoji
-smaller: true
+highlight-style: atom-one-dark
 ---
 
 ## Who am I?
 ### And why should I be talking about this?
-* Researcher in biology/physics for ~ 9 years
-* Research Software Engineer for 3 years
+
+::: columns
+
+::: {.column width="50%"}
+::: {layout-nrow=2}
+<img src="assets/images/RSE_logo_blackborder.png" width=300 align="center" />
+
+<img src="assets/images/SSIFullColour.png" width=300 align="center" />
+:::
+:::
+
+::: {.column width="50%"}
+* Previously researcher in biology/physics
+* Research Software Engineer
 * [Software Sustainability Institute](https://software.ac.uk/) Fellow
+:::
+:::
 
 ## What is reproducibility?
 
@@ -26,29 +40,98 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 
 ## Why is reproducibility important for research?
 
+<br>
+
+::: columns
+::: {.column width="50%"}
+
 ![](assets/images/turing-reasons-reproducibility.png){fig-align="center"}
 
 <font size="3">Image: [The Turing
 Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html)</font>
 
-::: incremental
-- ## Verification :heavy_check_mark:
-- ## Share learning
-- ## Re-use :recycle:
-- ## Longevity :hourglass_flowing_sand:
-- ## Efficiency :watch:
-- ## Stop people from emailing asking for your code!
 :::
 
-## The Challenge of Reproducibility
+::: {.column width="50%"}
+
+* **Verification** :heavy_check_mark:
+* **Share learning**
+* **Re-use** :recycle:
+* **Longevity** :hourglass_flowing_sand:
+* **Efficiency** :watch:
+* **Make code accessible**
+
+:::
+:::
+
+
+
+
+## What is *software*?
+
+![](assets/images/software-code-twitter-poll.png){fig-align="center"}
+
+## The Challenge of Software Reproducibility
 
 * Create a well-defined computational **"environment"**
 * Document required software, data and where to get them
 * Document steps to reproduce analysis
 
+## General Principles of Reproducible Code
+
+* Organise your project
+* Share the code
+* Share the data
+* Define dependencies
+* Use version control
+* Document how to use the code
+* Get colleagues to try it out!
+
+## Organise your project
+<br>
+
+::: columns
+
+::: {.column width="50%"}
+
+### Try this! :heavy_check_mark:
+
+```
+data/
+docs/
+figs/
+output/
+src/
+    01_download_data.m
+    02_clean_data.m
+    03_fit_model.m
+    04_plot_figs.m
+README.md
+```
+:::
+
+::: {.column width="50%"}
+
+### Not this! :x:
+```
+first_try.m
+pretty.fig
+stuff/
+how%20torun.docx
+data.csv
+data_(01).csv
+data.txt
+```
+
+:::
+
+:::
+
+<font size="3">Via [BES Guide to Reproducible Research](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf)</font>
+
 ## MATLAB can be ... challenging
 
-* Packages/lack thereof, project manageent, dependency management, the path
+* Packages/lack thereof, project management, dependency management, the path
 * Proprietary source code
 * MathWorks get most of their income from industry - so aren't largely motivated to develop open source tools and guidance
 * Lots of weird binary file formats
@@ -56,7 +139,11 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 
 ## So why bother?
 
-Lots of researchers use MATLAB, they aren't all going to stop
+Lots of researchers use MATLAB.
+
+![](assets/images/matlab_publications.png){fig-align="center"}
+
+<div align="center"><font size="3">Data from: [Web of Science](https://webofscience.com)</font></div>
 
 # The Solution
 
@@ -68,7 +155,7 @@ Lots of researchers use MATLAB, they aren't all going to stop
 
 ## Documentation
 
-# Guiding Principles for Reproducibility (in my opinion..)
+# Guiding Principles for Reproducibility<br>(in my opinion..)
 
 * write documentation
 * think about environment management
