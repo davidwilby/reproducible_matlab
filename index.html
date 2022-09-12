@@ -436,8 +436,8 @@ README.md</code></pre>
 <h2>General Principles of Reproducible Code</h2>
 <div>
 <ul>
-<li class="fragment">Share the code <span class="emoji" data-emoji="microscope">🔬</span></li>
-<li class="fragment">Share the data <span class="emoji" data-emoji="bar_chart">📊</span></li>
+<li class="fragment">Share the code <span class="emoji" data-emoji="microscope">🔬</span> (use a license!)</li>
+<li class="fragment">Share the data <span class="emoji" data-emoji="bar_chart">📊</span> (license here too!)</li>
 <li class="fragment">Define dependencies <span class="emoji" data-emoji="nerd_face">🤓</span></li>
 <li class="fragment">Use version control <span class="emoji" data-emoji="octopus">🐙</span></li>
 <li class="fragment">Document how to use the code <span class="emoji" data-emoji="clipboard">📋</span></li>
@@ -448,47 +448,116 @@ README.md</code></pre>
 <section id="matlab-can-be-challenging" class="slide level2">
 <h2>MATLAB can be … challenging</h2>
 <ul>
-<li>No package manager</li>
+<li>No package manager (<em>à la python, R, node etc.</em>)</li>
 <li>No virtual envrironments (sort of)</li>
 <li>Limited dependency discovery</li>
 <li>Proprietary source code</li>
 <li>MathWorks get most of their income from industry - so aren’t largely motivated to develop open source tools and guidance</li>
 <li>Lots of weird binary file formats</li>
-<li>Doesn’t get a lot of attention from software engineers</li>
+<li>Doesn’t get a lot of attention from (research) software engineers</li>
 </ul>
 </section>
 <section id="so-why-bother" class="slide level2">
 <h2>So why bother?</h2>
 <div class="fragment">
 <h4 id="lots-of-researchers-use-matlab.">Lots of researchers use MATLAB.</h4>
-<p><img src="assets/images/matlab_publications.png" width="600" align="center"></p>
+<p>12,000 active MATLAB licenses at The University of Sheffield</p>
+<p><img data-src="assets/images/matlab_publications.png" width="500"></p>
 <p><font size="3">Data from: <a href="https://webofscience.com">Web of Science</a></font></p>
 </div>
 </section>
-<section>
-<section id="the-solution" class="title-slide slide level1 center">
-<h1>The Solution?</h1>
-
+<section id="the-solution" class="slide level2">
+<h2>The Solution?</h2>
 </section>
 <section id="matlab-projects" class="slide level2">
-<h2>MATLAB ‘Projects’</h2>
-<ul>
+<h2>MATLAB ‘<a href="https://uk.mathworks.com/help/matlab/projects.html">Projects</a>’</h2>
+
+<img data-src="assets/images/matlab_project.png" width="500" class="r-stretch"><ul>
 <li>almost like a virtual environment</li>
 <li>loads files onto the MATLAB <code>path</code></li>
 </ul>
-
-<img src="assets/images/matlab_project.png" width="50%" class="r-stretch"></section>
+</section>
+<section id="aside-jargon-blast" class="slide level2">
+<h2>Aside: Jargon Blast <span class="emoji" data-emoji="boom">💥</span></h2>
+<div class="callout callout-note callout-captioned callout-style-simple">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>MATLAB <a href="https://uk.mathworks.com/help/matlab/projects.html">Projects</a></strong></p>
+</div>
+<div class="callout-content">
+<p>A tool for defining paths and files within a project, helping to improve portability.</p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-captioned callout-style-simple">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>MATLAB <a href="https://uk.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html">Toolboxes</a></strong></p>
+</div>
+<div class="callout-content">
+<p>A way of packaging up code as tools which will be used <em>across</em> your MATLAB installation. Kind of like ‘packages’ in other languages.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-note callout-captioned callout-style-simple">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>MATLAB <a href="https://uk.mathworks.com/help/matlab/matlab_oop/importing-classes.html">Packages</a></strong></p>
+</div>
+<div class="callout-content">
+<p>Not <em>really</em> like packages in any other language.</p>
+<p>A way of protecting namespaces, e.g.&nbsp;<code>import MyPackage.MyClass</code>.</p>
+<p>In folders starting with <code>+</code> e.g.&nbsp;<code>+MyPackage/</code></p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="dependency-management" class="slide level2">
 <h2>Dependency management</h2>
-</section>
-<section id="version-controlopen-source-development" class="slide level2">
-<h2>Version Control/Open Source Development</h2>
-</section>
-<section id="licensing" class="slide level2">
-<h2>Licensing</h2>
+
+<img data-src="assets/images/matlab_dependency_analyser.png" width="500" class="r-stretch"></section>
+<section id="section" class="slide level2">
+<h2></h2>
+<h3 id="now-what">Now what? <span class="emoji" data-emoji="shrug">🤷</span></h3>
+<div class="fragment">
+<ul>
+<li>Either document how to obtain and install the dependencies</li>
+</ul>
+<p><a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022">Example</a></p>
+<p><br></p>
+<ul>
+<li>Provide them <strong>with</strong> the code, if small and if permitted</li>
+</ul>
+</div>
 </section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
+<ul>
+<li><p>readme files</p></li>
+<li><p>livescripts</p></li>
+</ul>
+</section>
+<section>
+<section id="matlab-projects-can-be-reproducible" class="title-slide slide level1 center">
+<h1><span class="emoji" data-emoji="takeout_box">🥡</span> <strong>MATLAB projects <em>can</em> be reproducible</strong></h1>
+<p><img data-src="assets/images/Matlab_Logo.png" class="absolute" style="top: 250px; left: 300px; width: 350px; "></p>
+<div class="fragment">
+<p><img data-src="assets/images/sunglasses.png" class="absolute" style="top: 250px; left: 450px; width: 150px; "></p>
+</div>
+<p><font size="3">Image: <a href="https://en.wikipedia.org/wiki/MATLAB#/media/File:Matlab_Logo.png" class="absolute" data-top="500" data-left="500">Jarekt via Wikimedia</a></font></p>
 </section>
 <section id="guiding-principles-for-reproducibility" class="slide level2">
 <h2>Guiding Principles for Reproducibility</h2>
@@ -497,9 +566,18 @@ README.md</code></pre>
 <li>write documentation</li>
 <li>think about environment management</li>
 <li>write examples (documentation)</li>
-<li>project organisation</li>
+<li>organise project</li>
 <li>tutorials (also documentation)</li>
-<li>explain how to use the code (documentation)</li>
+<li>explain how to use the code! (documentation)</li>
+</ul>
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<ul>
+<li><a href="https://software.ac.uk">Software Sustainability Institute</a></li>
+<li><a href="https://rse.shef.ac.uk">Research Software Engineering Team</a></li>
+<li>in2Track Team (Civil Engineering) - Ehsan Kazemi, Yiqi Wu, Andy Nichols</li>
+<li>TeleRegain Team (ACCE) - Josh Giles, Salem Mansour, Jake Toth, Mahnaz Arvaneh</li>
 </ul>
 </section></section>
 <section id="resources" class="title-slide slide level1 center">
@@ -674,7 +752,7 @@ README.md</code></pre>
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: true,
+        previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
