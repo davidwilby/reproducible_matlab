@@ -165,7 +165,14 @@ Lots of researchers use MATLAB.
 * explain how to use the code (documentation)
 
 # Resources
+::: columns
+::: {.column width="50%"}
 * [The Turing Way](https://the-turing-way.netlify.app)
 * [BES Guide to Reproducible Research](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf)
 * [RepliMAT (Coming soon!)](https://davidwilby.dev/repliMAT)
 * [RSE Code Clinics](https://rse.shef.ac.uk/support/code-clinic/)
+:::
+::: {.column width="50%"}
+![](assets/images/qrcode.png)
+:::
+:::
