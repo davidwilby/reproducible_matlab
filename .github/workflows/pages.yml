@@ -18,7 +18,7 @@ jobs:
       - name: Load project
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject("reproducible_matlab.prj")
+          command: addpath(genpath('src'))
 
       - name: Plot figures
         uses: matlab-actions/run-command@v1
