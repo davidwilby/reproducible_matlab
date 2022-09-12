@@ -1,0 +1,84 @@
+---
+title: " :recycle: Making MATLAB projects reproducible and shareable"
+format: revealjs
+author: "**Dr David Wilby** (he/him)<br>[RSE Team](https://rse.shef.ac.uk/), The University of Sheffield<br>[rse.shef.ac.uk](https://rse.shef.ac.uk) | [davidwilby.dev](https://davidwilby.dev)"
+institute: "<strong>OpenFest</strong>"
+date: "Thurs 15th September 2022"
+footer: "**slides**: [davidwilby.dev/openfest_matlab](https://davidwilby.dev/openfest_matlab) - **improve this talk!** [github.com/davidwilby/openfest_matlab](https://github.com/davidwilby/openfest_matlab)"
+from: markdown+emoji
+smaller: true
+---
+
+## Who am I?
+### And why should I be talking about this?
+* Researcher in biology/physics for ~ 9 years
+* Research Software Engineer for 3 years
+* [Software Sustainability Institute](https://software.ac.uk/) Fellow
+
+## What is reproducibility?
+
+![How the Turing Way defines reproducible
+research](assets/images/turing-way-definitions.jpg){fig-align="center"}
+
+<font size="3">Image: [The Turing
+Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions.html)</font>
+
+
+## Why is reproducibility important for research?
+
+![](assets/images/turing-reasons-reproducibility.png){fig-align="center"}
+
+<font size="3">Image: [The Turing
+Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html)</font>
+
+::: incremental
+- ## Verification :heavy_check_mark:
+- ## Share learning
+- ## Re-use :recycle:
+- ## Longevity :hourglass_flowing_sand:
+- ## Efficiency :watch:
+- ## Stop people from emailing asking for your code!
+:::
+
+## The Challenge of Reproducibility
+
+* Create a well-defined computational **"environment"**
+* Document required software, data and where to get them
+* Document steps to reproduce analysis
+
+## MATLAB can be ... challenging
+
+* Packages/lack thereof, project manageent, dependency management, the path
+* Proprietary source code
+* MathWorks get most of their income from industry - so aren't largely motivated to develop open source tools and guidance
+* Lots of weird binary file formats
+* Doesn't get a lot of attention from software engineers
+
+## So why bother?
+
+Lots of researchers use MATLAB, they aren't all going to stop
+
+# The Solution
+
+## MATLAB 'Projects'
+
+## Version Control/Open Source Development
+
+## Licensing
+
+## Documentation
+
+# Guiding Principles for Reproducibility (in my opinion..)
+
+* write documentation
+* think about environment management
+* write examples (documentation)
+* tutorials (also documentation)
+* project organisation
+* explain how to use the code (documentation)
+
+# Resources
+* [The Turing Way](https://the-turing-way.netlify.app)
+* [BES Guide to Reproducible Research](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf)
+* [RepliMAT (Coming soon!)](https://davidwilby.dev/repliMAT)
+* [RSE Code Clinics](https://rse.shef.ac.uk/support/code-clinic/)
