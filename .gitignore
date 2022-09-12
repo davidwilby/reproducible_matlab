@@ -1,3 +1,4 @@
 pages/*
 build/*
 /.quarto/
+*.html

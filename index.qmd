@@ -4,7 +4,7 @@ format: revealjs
 author: "**Dr David Wilby** (he/him)<br>[RSE Team](https://rse.shef.ac.uk/), The University of Sheffield<br>[rse.shef.ac.uk](https://rse.shef.ac.uk) | [davidwilby.dev](https://davidwilby.dev)"
 institute: "<strong>OpenFest</strong>"
 date: "Thurs 15th September 2022"
-footer: "**slides**: [davidwilby.dev/openfest_matlab](https://davidwilby.dev/openfest_matlab) - **improve this talk!** [github.com/davidwilby/openfest_matlab](https://github.com/davidwilby/openfest_matlab)"
+footer: "**slides**: [davidwilby.dev/reproducible_matlab](https://davidwilby.dev/reproducible_matlab) - **improve this talk!** [github.com/davidwilby/reproducible_matlab](https://github.com/davidwilby/reproducible_matlab)"
 from: markdown+emoji
 smaller: true
 ---
