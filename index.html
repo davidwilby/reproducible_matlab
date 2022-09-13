@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.189">
 
   <meta name="author" content="Dr David Wilby (he/him) RSE Team, The University of Sheffield rse.shef.ac.uk | davidwilby.dev">
-  <title>♻️ Making MATLAB projects reproducible and shareable</title>
+  <title>Making MATLAB projects reproducible and shareable ♻️</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,35 +324,34 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title"><span class="emoji" data-emoji="recycle">♻️</span> Making MATLAB projects reproducible and shareable</h1>
+  <h1 class="title">Making MATLAB projects reproducible and shareable<br><span class="emoji" data-emoji="recycle">♻️</span></h1>
   <p class="author"><strong>Dr David Wilby</strong> (he/him)<br><a href="https://rse.shef.ac.uk/">RSE Team</a>, The University of Sheffield<br><a href="https://rse.shef.ac.uk">rse.shef.ac.uk</a> | <a href="https://davidwilby.dev">davidwilby.dev</a></p>
-  <p class="institute"><strong>OpenFest</strong></p>
-  <p class="date">Thurs 15th September 2022</p>
+  <p class="institute"><strong>OpenFest</strong> Thurs 15th September 2022</p>
 </section>
 
 <section id="who-am-i" class="slide level2">
 <h2>Who am I?</h2>
-<h3 id="and-why-should-i-be-talking-about-this">And why should I be talking about this?</h3>
+<p><strong>And why should I be talking about this?</strong></p>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="assets/images/RSE_logo_blackborder.png" width="300" align="center"></p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="assets/images/SSIFullColour.png" width="300" align="center"></p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
+<p><img data-src="assets/images/jexbio_220_11_coverfig.png" width="350"></p>
+<p><font size="2"><a href="https://journals.biologists.com/jeb/article/220/11/1997/17957">Wilby &amp; Roberts (2017) <em>J. Exp. Bio.</em></a></font></p>
+</div><div class="column" style="width:60%;">
 <ul>
 <li>Previously researcher in biology/physics</li>
 <li>Research Software Engineer</li>
 <li><a href="https://software.ac.uk/">Software Sustainability Institute</a> Fellow</li>
 </ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="assets/images/RSE_logo_blackborder.png" width="200"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="assets/images/SSIFullColour.png"></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -403,10 +402,10 @@
 <li>Organise your project <span class="emoji" data-emoji="bookmark_tabs">📑</span></li>
 </ul>
 </div>
-<div class="fragment">
 <!-- ## Organise your project -->
 <div class="columns">
 <div class="column" style="width:50%;">
+<div class="fragment">
 <p><strong>Instead of</strong> <span class="emoji" data-emoji="x">❌</span></p>
 <pre><code>first_try.m
 pretty.fig
@@ -415,7 +414,9 @@ how%20torun.docx
 data.csv
 data_(01).csv
 data.txt</code></pre>
+</div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <p><strong>Try</strong> <span class="emoji" data-emoji="heavy_check_mark">✔️</span></p>
 <pre><code>data/
 docs/
@@ -429,6 +430,8 @@ src/
 README.md</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <p><font size="3">Via <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></font></p>
 </div>
 </section>
@@ -438,44 +441,82 @@ README.md</code></pre>
 <ul>
 <li class="fragment">Share the code <span class="emoji" data-emoji="microscope">🔬</span> (use a license!)</li>
 <li class="fragment">Share the data <span class="emoji" data-emoji="bar_chart">📊</span> (license here too!)</li>
-<li class="fragment">Define dependencies <span class="emoji" data-emoji="nerd_face">🤓</span></li>
+<li class="fragment">Define dependencies &amp; environment <span class="emoji" data-emoji="nerd_face">🤓</span></li>
 <li class="fragment">Use version control <span class="emoji" data-emoji="octopus">🐙</span></li>
 <li class="fragment">Document how to use the code <span class="emoji" data-emoji="clipboard">📋</span></li>
 <li class="fragment">Get colleagues to try it out! <span class="emoji" data-emoji="people_holding_hands">🧑‍🤝‍🧑</span></li>
 </ul>
 </div>
 </section>
-<section id="matlab-can-be-challenging" class="slide level2">
+<section id="matlab-can-be-challenging" class="slide level2 smaller">
 <h2>MATLAB can be … challenging</h2>
+<div>
 <ul>
-<li>No package manager (<em>à la python, R, node etc.</em>)</li>
-<li>No virtual envrironments (sort of)</li>
-<li>Limited dependency discovery</li>
-<li>Proprietary source code</li>
-<li>MathWorks get most of their income from industry - so aren’t largely motivated to develop open source tools and guidance</li>
-<li>Lots of weird binary file formats</li>
-<li>Doesn’t get a lot of attention from (research) software engineers</li>
+<li class="fragment"><span class="emoji" data-emoji="package">📦</span> <span class="emoji" data-emoji="x">❌</span> No package manager (<em>à la python, R, node etc.</em>)</li>
+<li class="fragment"><span class="emoji" data-emoji="desktop_computer">🖥️</span> <span class="emoji" data-emoji="x">❌</span> No virtual envrironments (sort of)</li>
+<li class="fragment"><span class="emoji" data-emoji="nerd_face">🤓</span> <span class="emoji" data-emoji="x">❌</span> Limited dependency discovery/management</li>
+<li class="fragment"><span class="emoji" data-emoji="no_entry">⛔</span> Proprietary source code</li>
+<li class="fragment"><span class="emoji" data-emoji="money_with_wings">💸</span> MathWorks get most of their income from industry - so aren’t largely motivated to develop open source tools and guidance</li>
+<li class="fragment"><span class="emoji" data-emoji="upside_down_face">🙃</span> Lots of weird binary file formats</li>
+<li class="fragment"><span class="emoji" data-emoji="technologist">🧑‍💻</span><span class="emoji" data-emoji="x">❌</span> Doesn’t get a lot of attention from (research) software engineers</li>
+<li class="fragment"><span class="emoji" data-emoji="persevere">😣</span> sigh…</li>
 </ul>
+</div>
 </section>
 <section id="so-why-bother" class="slide level2">
 <h2>So why bother?</h2>
 <div class="fragment">
-<h4 id="lots-of-researchers-use-matlab.">Lots of researchers use MATLAB.</h4>
+<p><strong>Lots</strong> of researchers use MATLAB.</p>
+</div>
+<div class="fragment">
 <p>12,000 active MATLAB licenses at The University of Sheffield</p>
-<p><img data-src="assets/images/matlab_publications.png" width="500"></p>
+</div>
+<div class="fragment">
+<p><img data-src="assets/images/matlab_publications.png" width="600"></p>
 <p><font size="3">Data from: <a href="https://webofscience.com">Web of Science</a></font></p>
 </div>
 </section>
-<section id="the-solution" class="slide level2">
-<h2>The Solution?</h2>
-</section>
-<section id="matlab-projects" class="slide level2">
-<h2>MATLAB ‘<a href="https://uk.mathworks.com/help/matlab/projects.html">Projects</a>’</h2>
+<section>
+<section id="whats-the-solution" class="title-slide slide level1 center">
+<h1>What’s the solution?</h1>
 
-<img data-src="assets/images/matlab_project.png" width="500" class="r-stretch"><ul>
+</section>
+<section id="case-study" class="slide level2">
+<h2>Case study</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="assets/images/repo_screenshot.png"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Paper in review</li>
+<li>Uses MATLAB (&amp; R) code to run some plotting and statistical analysis</li>
+<li>Hosted on GitHub at <a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">github.com/davidwilby/HermitCrabPolarizationVision2022</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="environment-matlab-projects" class="slide level2">
+<h2>Environment: MATLAB ‘<a href="https://uk.mathworks.com/help/matlab/projects.html">Projects</a>’</h2>
+
+<img src="assets/images/matlab_project.png" width="800px" class="r-stretch"><aside class="notes">
+<ul>
 <li>almost like a virtual environment</li>
 <li>loads files onto the MATLAB <code>path</code></li>
+<li>projects are an effort to make matlab more portable</li>
+<li>the path is a list of filesystem locations where matlab ‘looks’ for code</li>
+<li>projects load specific files onto the path when loaded and take them off when closed</li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="aside-jargon-blast" class="slide level2">
 <h2>Aside: Jargon Blast <span class="emoji" data-emoji="boom">💥</span></h2>
@@ -488,7 +529,7 @@ README.md</code></pre>
 <p><strong>MATLAB <a href="https://uk.mathworks.com/help/matlab/projects.html">Projects</a></strong></p>
 </div>
 <div class="callout-content">
-<p>A tool for defining paths and files within a project, helping to improve portability.</p>
+<p>A tool for defining files, paths and dependencies within a project, helping to improve portability.</p>
 </div>
 </div>
 </div>
@@ -527,37 +568,69 @@ README.md</code></pre>
 </section>
 <section id="dependency-management" class="slide level2">
 <h2>Dependency management</h2>
+<h3 id="dependency-analyzer">Dependency analyzer</h3>
 
 <img data-src="assets/images/matlab_dependency_analyser.png" width="500" class="r-stretch"></section>
 <section id="section" class="slide level2">
 <h2></h2>
 <h3 id="now-what">Now what? <span class="emoji" data-emoji="shrug">🤷</span></h3>
 <div class="fragment">
+<!-- -->
+<h4 id="either">Either:</h4>
+</div>
+<div class="fragment">
 <ul>
-<li>Either document how to obtain and install the dependencies</li>
-</ul>
-<p><a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022">Example</a></p>
-<p><br></p>
-<ul>
-<li>Provide them <strong>with</strong> the code, if small and if permitted</li>
+<li><strong>document how to obtain and install the dependencies</strong></li>
 </ul>
 </div>
-</section>
-<section id="documentation" class="slide level2">
-<h2>Documentation</h2>
+<div class="fragment">
+<!-- -->
+<h4 id="or">or</h4>
+</div>
+<div class="fragment">
 <ul>
-<li><p>readme files</p></li>
-<li><p>livescripts</p></li>
+<li><strong>provide dependencies <em>with</em> the code, if small and if permitted</strong></li>
 </ul>
+</div>
+<div class="fragment">
+<p><img data-src="assets/images/readme_deps.png" width="800"></p>
+</div>
 </section>
+<section id="documentation---readme-files" class="slide level2">
+<h2>Documentation - readme files</h2>
+<div class="fragment">
+<p><a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank"><img data-src="assets/images/readme_01.png"></a></p>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="assets/images/readme_02.png" class="r-stretch"></section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="assets/images/live-script.png" class="absolute" style="top: 0px; "></p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://bit.ly/3L7WM9Z"><img data-src="assets/images/live-script-qrcode.png"></a></p>
+</figure>
+</div>
+<p><a href="https://bit.ly/3L7WM9Z">bit.ly/3L7WM9Z</a></p>
+</div>
+</div>
+</section></section>
 <section>
 <section id="matlab-projects-can-be-reproducible" class="title-slide slide level1 center">
 <h1><span class="emoji" data-emoji="takeout_box">🥡</span> <strong>MATLAB projects <em>can</em> be reproducible</strong></h1>
 <p><img data-src="assets/images/Matlab_Logo.png" class="absolute" style="top: 250px; left: 300px; width: 350px; "></p>
+<div class="absolute" style="top: 500px; right: 300px; ">
+<p><font size="3">Image: <a href="https://en.wikipedia.org/wiki/MATLAB#/media/File:Matlab_Logo.png">Jarekt via Wikimedia</a></font></p>
+</div>
 <div class="fragment">
 <p><img data-src="assets/images/sunglasses.png" class="absolute" style="top: 250px; left: 450px; width: 150px; "></p>
 </div>
-<p><font size="3">Image: <a href="https://en.wikipedia.org/wiki/MATLAB#/media/File:Matlab_Logo.png" class="absolute" data-top="500" data-left="500">Jarekt via Wikimedia</a></font></p>
 </section>
 <section id="guiding-principles-for-reproducibility" class="slide level2">
 <h2>Guiding Principles for Reproducibility</h2>
@@ -588,6 +661,7 @@ README.md</code></pre>
 <li><a href="https://the-turing-way.netlify.app">The Turing Way</a></li>
 <li><a href="https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf">BES Guide to Reproducible Research</a></li>
 <li><a href="https://davidwilby.dev/repliMAT">repliMAT (Coming soon!)</a></li>
+<li><a href="https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/">Blog: a concise guide</a></li>
 <li><a href="https://rse.shef.ac.uk/support/code-clinic/">Code Clinics</a></li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -650,10 +724,10 @@ README.md</code></pre>
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
+        showSlideNumber: 'speaker',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
