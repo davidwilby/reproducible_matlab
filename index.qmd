@@ -63,28 +63,36 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 
 ::: {.column width="50%"}
 
+::: {.incremental}
 * **Verification** :heavy_check_mark:
-* **Share learning**
+* **Share learning** :student:
 * **Re-use** :recycle:
 * **Longevity** :hourglass_flowing_sand:
 * **Efficiency** :watch:
-* **Make code accessible**
-
+* **Make code accessible**  :open_book:
 :::
 :::
-
-
-
+:::
 
 ## What is *software*?
 
 ![](assets/images/software-code-twitter-poll.png){fig-align="center"}
 
+::: {.notes}
+* laden with confirmation bias
+* software means the same as code as far as this talk goes at least
+* software or code, is good for research reproducibility
+* but it is not without its challenges
+:::
+
 ## The Challenge of Software Reproducibility
 
-* Create a well-defined computational **"environment"**
+<br>
+
 * Document required software, data and where to get them
 * Document steps to reproduce analysis
+* Create a well-defined computational **"environment"**
+* Make it easy!
 
 ## General Principles of Reproducible Code
 
@@ -226,7 +234,8 @@ In folders starting with `+` e.g. `+MyPackage/`
 :::
 
 ## Dependency management
-### Dependency analyzer
+[**Dependency analyzer**](https://uk.mathworks.com/help/matlab/matlab_prog/analyze-project-dependencies.html)
+
 ![](assets/images/matlab_dependency_analyser.png){width="500"}
 
 ##
@@ -289,15 +298,16 @@ In folders starting with `+` e.g. `+MyPackage/`
 :::
 
 
-## Guiding Principles for Reproducibility
-### (in my opinion..)
+## Reproducibility Checklist
 
-* write documentation
-* think about environment management
-* write examples (documentation)
-* organise project
-* tutorials (also documentation)
-* explain how to use the code! (documentation)
+::: {.incremental}
+* :ballot_box_with_check: write documentation
+* :ballot_box_with_check: think about environment management
+* :ballot_box_with_check: write examples (documentation!)
+* :ballot_box_with_check: organise project
+* :ballot_box_with_check: tutorials (also documentation!!s)
+* :ballot_box_with_check: explain how to use the code! (documentation!!!)
+:::
 
 ## Acknowledgements
 
