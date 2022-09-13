@@ -1,30 +1,40 @@
 ---
-title: " :recycle: Making MATLAB projects reproducible and shareable"
-format: revealjs
+title: "Making MATLAB projects reproducible and shareable<br>:recycle:"
+format:
+    revealjs:
+        slide-number: true
+        show-slide-number: speaker
 author: "**Dr David Wilby** (he/him)<br>[RSE Team](https://rse.shef.ac.uk/), The University of Sheffield<br>[rse.shef.ac.uk](https://rse.shef.ac.uk) | [davidwilby.dev](https://davidwilby.dev)"
-institute: "<strong>OpenFest</strong>"
-date: "Thurs 15th September 2022"
+institute: "<strong>OpenFest</strong> Thurs 15th September 2022"
+date: ""
 footer: "**slides**: [davidwilby.dev/reproducible_matlab](https://davidwilby.dev/reproducible_matlab) - **improve this talk!** [github.com/davidwilby/reproducible_matlab](https://github.com/davidwilby/reproducible_matlab)"
 from: markdown+emoji
 ---
 
 ## Who am I?
-### And why should I be talking about this?
+**And why should I be talking about this?**
 
 ::: columns
 
-::: {.column width="50%"}
-::: {layout-nrow=2}
-<img src="assets/images/RSE_logo_blackborder.png" width=300 align="center" />
+::: {.column width="40%"}
 
-<img src="assets/images/SSIFullColour.png" width=300 align="center" />
-:::
+![](assets/images/jexbio_220_11_coverfig.png){width="350"}
+
+<font size="2">[Wilby & Roberts (2017) *J. Exp. Bio.*](https://journals.biologists.com/jeb/article/220/11/1997/17957)</font>
+
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 * Previously researcher in biology/physics
 * Research Software Engineer
 * [Software Sustainability Institute](https://software.ac.uk/) Fellow
+
+::: {layout-ncol=2}
+![](assets/images/RSE_logo_blackborder.png){width="200"}
+
+![](assets/images/SSIFullColour.png)
+:::
+
 :::
 :::
 
@@ -78,15 +88,14 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 
 ## General Principles of Reproducible Code
 
-. . .
-
+::: {.fragment}
 * Organise your project :bookmark_tabs:
-
-. . .
+:::
 
 <!-- ## Organise your project -->
 ::: columns
 ::: {.column width="50%"}
+::: {.fragment}
 **Instead of** :x:
 ```
 first_try.m
@@ -98,7 +107,9 @@ data_(01).csv
 data.txt
 ```
 :::
+:::
 ::: {.column width="50%"}
+::: {.fragment}
 **Try** :heavy_check_mark:
 ```
 data/
@@ -114,9 +125,12 @@ README.md
 ```
 :::
 :::
+:::
 
+::: {.fragment}
 <font size="3">Via [BES Guide to Reproducible Research](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf)</font>
 
+:::
 
 
 ## General Principles of Reproducible Code
@@ -124,48 +138,73 @@ README.md
 ::: {.incremental}
 * Share the code :microscope: (use a license!)
 * Share the data :bar_chart: (license here too!)
-* Define dependencies :nerd_face:
+* Define dependencies & environment :nerd_face:
 * Use version control :octopus:
 * Document how to use the code :clipboard:
 * Get colleagues to try it out! :people_holding_hands: 
 :::
 
-## MATLAB can be ... challenging
+## MATLAB can be ... challenging{.smaller}
 
-* No package manager (*à la python, R, node etc.*)
-* No virtual envrironments (sort of)
-* Limited dependency discovery
-* Proprietary source code
-* MathWorks get most of their income from industry - so aren't largely motivated to develop open source tools and guidance
-* Lots of weird binary file formats
-* Doesn't get a lot of attention from (research) software engineers
+::: {.incremental}
+* :package: :x: No package manager (*à la python, R, node etc.*)
+* :desktop_computer: :x: No virtual envrironments (sort of)
+* :nerd_face: :x: Limited dependency discovery/management
+* :no_entry: Proprietary source code
+* :money_with_wings: MathWorks get most of their income from industry - so aren't largely motivated to develop open source tools and guidance
+* :upside_down_face: Lots of weird binary file formats
+* :technologist::x: Doesn't get a lot of attention from (research) software engineers
+* :persevere: sigh...
+:::
 
 ## So why bother?
 
-. . .
+::: {.fragment}
+**Lots** of researchers use MATLAB.
+:::
 
-#### Lots of researchers use MATLAB.
-
+::: {.fragment}
 12,000 active MATLAB licenses at The University of Sheffield
+:::
 
-![](assets/images/matlab_publications.png){width="500px"}
+::: {.fragment}
+![](assets/images/matlab_publications.png){width="600"}
 
 <font size="3">Data from: [Web of Science](https://webofscience.com)</font>
 
-## The Solution?
+:::
 
-## MATLAB '[Projects](https://uk.mathworks.com/help/matlab/projects.html)'
+# What's the solution?
 
-![](assets/images/matlab_project.png){width="500"}
+## Case study
+::: columns
+::: {.column width="50%"}
+![](assets/images/repo_screenshot.png)
+:::
+::: {.column width="50%"}
+* Paper in review
+* Uses MATLAB (& R) code to run some plotting and statistical analysis
+* Hosted on GitHub at <a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">github.com/davidwilby/HermitCrabPolarizationVision2022</a>
+:::
+:::
 
+## Environment: MATLAB '[Projects](https://uk.mathworks.com/help/matlab/projects.html)'
+
+<a href="assets/images/matlab_project.png" target="_blank"><img src="assets/images/matlab_project.png" width="800px" /></a>
+
+::: {.notes}
 * almost like a virtual environment
 * loads files onto the MATLAB `path`
+* projects are an effort to make matlab more portable
+* the path is a list of filesystem locations where matlab 'looks' for code
+* projects load specific files onto the path when loaded and take them off when closed
+:::
 
 ## Aside: Jargon Blast :boom:
 
 :::{.callout-note appearance="simple"}
 # MATLAB [Projects](https://uk.mathworks.com/help/matlab/projects.html)
-A tool for defining paths and files within a project, helping to improve portability.
+A tool for defining files, paths and dependencies within a project, helping to improve portability.
 :::
 
 :::{.fragment}
@@ -187,37 +226,67 @@ In folders starting with `+` e.g. `+MyPackage/`
 :::
 
 ## Dependency management
-
+### Dependency analyzer
 ![](assets/images/matlab_dependency_analyser.png){width="500"}
 
 ##
 ### Now what? :shrug:
 
-. . .
-
-* Either document how to obtain and install the dependencies
-
-[Example](https://github.com/davidwilby/HermitCrabPolarizationVision2022)
-
-<br>
-
-* Provide them **with** the code, if small and if permitted
-
-
-## Documentation
-* readme files
-
-* livescripts
-
-# :takeout_box: **MATLAB projects _can_ be reproducible**
-
-![](assets/images/Matlab_Logo.png){.absolute top=250 left=300 width="350"}
-
-:::{.fragment}
-![](assets/images/sunglasses.png){.absolute top=250 left=450 width="150"}
+::: {.fragment}
+#### Either:
 :::
 
-<font size="3">Image: [Jarekt via Wikimedia](https://en.wikipedia.org/wiki/MATLAB#/media/File:Matlab_Logo.png){.absolute top=500 left=500}</font>
+::: {.fragment}
+* **document how to obtain and install the dependencies**
+:::
+
+::: {.fragment}
+#### or
+:::
+
+::: {.fragment}
+* **provide dependencies *with* the code, if small and if permitted**
+:::
+
+::: {.fragment}
+![](assets/images/readme_deps.png){width="800"}
+:::
+
+## Documentation - readme files
+
+. . .
+
+<a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">![](assets/images/readme_01.png)</a>
+
+##
+
+<a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">![](assets/images/readme_02.png)</a>
+
+##
+
+:::columns
+::: {.column width="70%"}
+![](assets/images/live-script.png){.absolute top=0}
+:::
+::: {.column width="30%"}
+[![](assets/images/live-script-qrcode.png)](https://bit.ly/3L7WM9Z)
+
+[bit.ly/3L7WM9Z](https://bit.ly/3L7WM9Z)
+:::
+:::
+
+# :takeout_box: **MATLAB projects _can_ be reproducible**
+![](assets/images/Matlab_Logo.png){.absolute top=250 left=300 width="350"}
+
+::: {.absolute top=500 right=300}
+
+<font size="3">Image: [Jarekt via Wikimedia](https://en.wikipedia.org/wiki/MATLAB#/media/File:Matlab_Logo.png)</font>
+
+:::
+
+::: {.fragment}
+![](assets/images/sunglasses.png){.absolute top=250 left=450 width="150"}
+:::
 
 
 ## Guiding Principles for Reproducibility
@@ -243,6 +312,7 @@ In folders starting with `+` e.g. `+MyPackage/`
 * [The Turing Way](https://the-turing-way.netlify.app)
 * [BES Guide to Reproducible Research](https://www.britishecologicalsociety.org/wp-content/uploads/2019/06/BES-Guide-Reproducible-Code-2019.pdf)
 * [repliMAT (Coming soon!)](https://davidwilby.dev/repliMAT)
+* [Blog: a concise guide](https://rse.shef.ac.uk/blog/2022-05-05-concise-guide-to-reproducible-matlab/)
 * [Code Clinics](https://rse.shef.ac.uk/support/code-clinic/)
 :::
 ::: {.column width="50%"}

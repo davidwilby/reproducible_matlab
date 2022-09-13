@@ -2,6 +2,7 @@ pages/*
 build/*
 /.quarto/
 *.html
+*_files/
 
 # Windows default autosave extension
 *.asv
@@ -35,3 +36,4 @@ codegen/
 # Octave session info
 octave-workspace
 
+.Rproj.user

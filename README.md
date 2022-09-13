@@ -22,3 +22,13 @@ Quarto documents can be rendered in either:
 Full instructions can be found at the link above, however in brief:
 * In RStudio, open `index.qmd`, above the document click `Render`
 * In the terminal, run `quarto render`
+
+## Reproducing plot(s)
+
+### Dependencies
+* MATLAB (most modern versions should work, though only version R2022a is tested)
+
+1.  Clone this repository ([instructions here for MATLAB](https://uk.mathworks.com/help/simulink/ug/clone-git-repository.html))
+2.  Install any uninstalled dependencies, above.
+3.  Load the project file (`reproducible_matlab.prj`, by double-clicking in MATLAB)
+4.  Run the function `plot_matlab_publications` to process data and plot figure.
