@@ -1,6 +1,11 @@
 # How to make MATLAB projects more reproducible and shareable :recycle:
 
-Slides for a talk for The University of Sheffield OpenFest 15th September 2022.
+Slides for a talk on reproducible MATLAB projects.
+
+
+## Events
+Events that this talk has been presented at:
+* OpenFest, The University of Sheffield, 15th September 2022.
 
 ## Using these slides
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

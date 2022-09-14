@@ -336,7 +336,7 @@ In folders starting with `+` e.g. `+MyPackage/`
 * [Software Sustainability Institute](https://software.ac.uk)
 * [Research Software Engineering Team](https://rse.shef.ac.uk)
 * in2Track Team (Civil Engineering) - Ehsan Kazemi, Yiqi Wu, Andy Nichols
-* TeleRegain Team (ACCE) - Josh Giles, Salem Mansour, Jake Toth, Mahnaz Arvaneh
+* TeleRegain Team (ACSE) - Josh Giles, Salem Mansour, Jake Toth, Mahnaz Arvaneh
 
 # Resources
 ::: columns
