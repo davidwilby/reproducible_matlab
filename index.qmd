@@ -150,6 +150,7 @@ README.md
 * Use version control :octopus:
 * Document how to use the code :clipboard:
 * Get colleagues to try it out! :people_holding_hands: 
+* Just try your best! :+1:
 :::
 
 ## MATLAB can be ... challenging{.smaller}
@@ -201,9 +202,9 @@ README.md
 <a href="assets/images/matlab_project.png" target="_blank"><img src="assets/images/matlab_project.png" width="800px" /></a>
 
 ::: {.notes}
+* projects are an effort to make matlab more portable
 * almost like a virtual environment
 * loads files onto the MATLAB `path`
-* projects are an effort to make matlab more portable
 * the path is a list of filesystem locations where matlab 'looks' for code
 * projects load specific files onto the path when loaded and take them off when closed
 :::
@@ -261,15 +262,30 @@ In folders starting with `+` e.g. `+MyPackage/`
 ![](assets/images/readme_deps.png){width="800"}
 :::
 
+::: {.notes}
+* as I said, there's no package manager
+* or built in programmatic way of installing dependencies
+* yet
+* so what's the solution here?
+:::
+
 ## Documentation - readme files
 
 . . .
 
 <a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">![](assets/images/readme_01.png)</a>
 
+::: {.notes}
+* In this readme you can see that I've illustrated the structure and contents of the repository
+:::
+
 ##
 
 <a href="https://github.com/davidwilby/HermitCrabPolarizationVision2022" target="_blank">![](assets/images/readme_02.png)</a>
+
+::: {.notes}
+* regarding the dependencies, all I've been able to do is to detail the dependencies
+:::
 
 ##
 
@@ -282,6 +298,12 @@ In folders starting with `+` e.g. `+MyPackage/`
 
 [bit.ly/3L7WM9Z](https://bit.ly/3L7WM9Z)
 :::
+:::
+
+::: {.notes}
+* but one thing that can be even better than this is to use a literate programming tool
+* the matlab version of this is called a live script
+* it's similar to rmarkdown or jupyter notebooks
 :::
 
 # :takeout_box: **MATLAB projects _can_ be reproducible**
