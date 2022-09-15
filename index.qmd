@@ -320,16 +320,16 @@ In folders starting with `+` e.g. `+MyPackage/`
 :::
 
 
-<!-- ## Reproducibility Checklist
+## Reproducibility Checklist
 
 ::: {.incremental}
-* :ballot_box_with_check: write documentation
-* :ballot_box_with_check: think about environment management
-* :ballot_box_with_check: write examples (documentation!)
 * :ballot_box_with_check: organise project
-* :ballot_box_with_check: tutorials (also documentation!!s)
-* :ballot_box_with_check: explain how to use the code! (documentation!!!)
-::: -->
+* :ballot_box_with_check: share your code and data
+* :ballot_box_with_check: **document**/capture dependencies
+* :ballot_box_with_check: write examples (**documentation**!)
+* :ballot_box_with_check: tutorials (also **documentation**!!)
+* :ballot_box_with_check: explain how to use the code! (**documentation**!!!)
+:::
 
 ## Acknowledgements
 
