@@ -94,7 +94,7 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 * Create a well-defined computational **"environment"**
 * Make it easy!
 
-## General Principles of Reproducible Code
+## (some) Principles of Reproducible Code
 
 ::: {.fragment}
 * Organise your project :bookmark_tabs:
@@ -141,7 +141,7 @@ README.md
 :::
 
 
-## General Principles of Reproducible Code
+## (some) Principles of Reproducible Code
 
 ::: {.incremental}
 * Share the code :microscope: (use a license!)
@@ -320,7 +320,7 @@ In folders starting with `+` e.g. `+MyPackage/`
 :::
 
 
-## Reproducibility Checklist
+<!-- ## Reproducibility Checklist
 
 ::: {.incremental}
 * :ballot_box_with_check: write documentation
@@ -329,7 +329,7 @@ In folders starting with `+` e.g. `+MyPackage/`
 * :ballot_box_with_check: organise project
 * :ballot_box_with_check: tutorials (also documentation!!s)
 * :ballot_box_with_check: explain how to use the code! (documentation!!!)
-:::
+::: -->
 
 ## Acknowledgements
 
